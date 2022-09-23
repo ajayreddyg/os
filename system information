@@ -1,0 +1,34 @@
+Aim:- To write a program in vi editor to show various information using shell command
+Algorithm:-
+Get the system information such as network name and node name, kernel name, kernel 
+version e.t.c . 2 Network $node name=$(uname –n). Kernel name=$(uname –s) Kernel 
+ru=$(uname –a). Operating system =$(uname –m). All information $(uname –A).
+Program:-
+echo "NETWORK = $(uname –n)"
+echo "Kernel NAME = $(uname –s)"
+echo "Kernel version = $(uname –v)" 
+echo "Operating System = $(uname –m)" 
+echo "All information = $(uname –a)
+Aim:-Shell script to display Pascal’s trinagle
+Program;-
+#!/bin/bash
+echo -n "Enter the number of Row "
+read NR
+typeset -A arr
+for i in `seq 0 $NR`;do
+arr[$i,0]=1 
+arr[$i,$i]=1 
+p=$((i-1))
+ for ((j=1;j<$i;j++));do
+ a=${arr[$((i-1)),$((j-1))]}
+ b=${arr[$((i-1)),$j]}
+ arr[$i,$j]=$((a+b))
+done
+done 
+for ((i=0;i<=$NR;i++));do
+for((j=0;j<=$i;j++))
+do
+ echo -n ${arr[$i,$j]} " "
+done
+printf "\n"
+done
