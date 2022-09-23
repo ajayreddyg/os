@@ -1,0 +1,26 @@
+Aim:- To write a program for converting files from uppercase case to lowercase and
+viceversa.
+Algorithm:-
+1)Get the file name. 2) store the name in a variable. 3) Apply conversion to that variable. 
+4) Store it in other variable. 5) Finally display the converted file name.
+Program:-
+Lower to Upper:-
+for i in *
+do
+echo "Before converting the filename is : "
+echo $i
+j=`echo $i | tr '[a-z]' '[A-Z]'`
+echo "After converting the filename is : "
+echo $j
+mv $i$j
+done
+Upper to Lower:-
+for i in *
+do
+echo "Before converting the filename is : "
+echo $i
+j=`echo $i | tr '[A-Z]' '[a-z]'`
+echo "After converting the filename is : "
+echo $j
+mv $i$j
+done
