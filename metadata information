@@ -1,8 +1,0 @@
-Aim:-Shell script to display metadata information about a file.
-Program:-
-echo "Enter path to File"
-read r1
-cd $r1
-echo "Enter filename "
-read r2
-stat $r2
