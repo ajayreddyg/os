@@ -1,0 +1,26 @@
+Aim:- To write a program for menu based math calculator using shell scripting commands.
+Algorithm:-
+Read the operator 2) Read the operands 3) Using the operator as choice for switch case 
+write case for operators 4) End switch case 5) Stop
+Program:-
+# !/bin/bash
+echo "Enter Two numbers : "
+read a
+read b
+echo "Enter Choice :"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+read ch
+case $ch in
+1)res=`echo $a + $b | bc`
+;;
+2)res=`echo $a - $b | bc`
+;;
+3)res=`echo $a \* $b | bc`
+;;
+4)res=`echo "scale=2; $a / $b" | bc`
+;;
+esac
+echo "Result : $res"
